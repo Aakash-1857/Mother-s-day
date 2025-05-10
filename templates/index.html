@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-20">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Sweet Delights</h1>
+            <div class="space-x-6">
+                <a href="#home" class="nav-link text-gray-600 font-semibold">Home</a>
+                <a href="#cakes" class="nav-link text-gray-600 font-semibold">Cakes</a>
+                <a href="#contact" class="nav-link text-gray-600 font-semibold">Contact</a>
+                <a href="{{ url_for('message') }}" class="nav-link text-gray-600 font-semibold">Leave a Message</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="{{ url_for('static', filename='small.png') }}" alt="Floating Cake" class="floating-cake" style="top: 10%; left: 5%; width: 200px;">
+        <img src="{{ url_for('static', filename='big.png') }}" alt="Floating Cake" class="floating-cake" style="top: 70%; right: 5%; width: 180px; animation-delay: 3s;">
+        <div class="hero-content">
+            <h1>Welcome to Our Bakery</h1>
+            <p>Indulge in handcrafted cakes that make every moment sweet</p>
+            <div class="flex flex-col items-center">
+                <a href="{{ url_for('cake') }}" class="cta-button">Explore Our Cakes</a>
+                <a href="{{ url_for('message') }}" class="cta-button">Leave a Message</a>
+            </div>
+        </div Comunitat Valenciana
+        </div>
+    </section>
+
+    <!-- Cakes Section -->
+    <section id="cakes" class="py-28 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-20">Our Exquisite Cakes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Cake 1 -->
+                <div class="cake-card shadow-2xl">
+                    <img src="https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg" alt="Chocolate Cake">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Chocolate Dream</h3>
+                        <p class="text-gray-600 mb-4">Rich chocolate layers with silky ganache.</p>
+                        <p class="text-xl font-bold text-pink-600">$35</p>
+                    </div>
+                </div>
+                <!-- Cake 2 -->
+                <div class="cake-card shadow-2xl">
+                    <img src="https://www.recipetineats.com/tachyon/2020/08/My-best-Vanilla-Cake_9.jpg" alt="Vanilla Cake">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Vanilla Bliss</h3>
+                        <p class="text-gray-600 mb-4">Fluffy vanilla sponge with creamy buttercream.</p>
+                        <p class="text-xl font-bold text-pink-600">$30</p>
+                    </div>
+                </div>
+                <!-- Cake 3 -->
+                <div class="cake-card shadow-2xl">
+                    <img src="https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strawberry Cake">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Strawberry Delight</h3>
+                        <p class="text-gray-600 mb-4">Fresh strawberries with whipped cream frosting.</p>
+                        <p class="text-xl font-bold text-pink-600">$40</p>
+                    </div>
+                </div>
+                <!-- Cake 4 -->
+                <div class="cake-card shadow-2xl">
+                    <img src="https://assets.hotcooking.co.uk/portrait45/lemon_drizzle_sandwich_cake_large.jpg" alt="Lemon Cake">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-800">Lemon Zest</h3>
+                        <p class="text-gray-600 mb-4">Tangy lemon cake with citrus glaze.</p>
+                        <p class="text-xl font-bold text-pink-600">$32</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-28 contact-section">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title mb-12">Let’s Create Your Dream Cake</h2>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Contact us to customize your perfect cake for any occasion!</p>
+            <a href="mailto:info@sweetdelights.com" class="cta-button">Reach Out Now</a>
+        </div>
+    </section>
+
+    <!-- Message/Query Section -->
+    <section id="message" class="py-28 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">Leave a Message</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+                <form action="mailto:info@sweetdelights.com" method="post" enctype="text/plain">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg bg-gray-50" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" class="w-full px-4 py-3 rounded-lg bg-gray-50" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 Sweet Delights. Crafted with love.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animate cake cards on scroll
+        const cakeCards = document.querySelectorAll('.cake-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        cakeCards.forEach(card => observer.observe(card));
+    </script>

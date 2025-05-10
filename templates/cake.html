@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Cakes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cake.css') }}">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="text-6xl font-bold mb-4">Sweet Delights Bakery</h1>
+            <p class="text-2xl mb-8">Crafting unforgettable moments with every bite</p>
+            <a href="#cakes" class="cta-button text-white px-8 py-4 rounded-full text-lg font-semibold">Discover Our Cakes</a>
+        </div>
+    </section>
+
+    <!-- Cakes Section -->
+    <section id="cakes" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-16 text-gray-800">Our Exquisite Cakes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Cake 1 -->
+                <div class="cake-card bg-white shadow-xl">
+                    <img src="https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg" alt="Chocolate Cake">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Chocolate Dream</h3>
+                        <p class="text-gray-600 mb-4">Decadent chocolate layers with silky ganache.</p>
+                        <p class="text-xl font-bold text-pink-600">$35</p>
+                    </div>
+                </div>
+                <!-- Cake 2 -->
+                <div class="cake-card bg-white shadow-xl">
+                    <img src="https://www.recipetineats.com/tachyon/2020/08/My-best-Vanilla-Cake_9.jpg" alt="Vanilla Cake">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Vanilla Bliss</h3>
+                        <p class="text-gray-600 mb-4">Fluffy vanilla sponge with creamy buttercream.</p>
+                        <p class="text-xl font-bold text-pink-600">$30</p>
+                    </div>
+                </div>
+                <!-- Cake 3 -->
+                <div class="cake-card bg-white shadow-xl">
+                    <img src="https://images.pexels.com/photos/239581/pexels-photo-239581.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strawberry Cake">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Strawberry Delight</h3>
+                        <p class="text-gray-600 mb-4">Fresh strawberries with whipped cream frosting.</p>
+                        <p class="text-xl font-bold text-pink-600">$40</p>
+                    </div>
+                </div>
+                <!-- Cake 4 -->
+                <div class="cake-card bg-white shadow-xl">
+                    <img src="https://assets.hotcooking.co.uk/portrait45/lemon_drizzle_sandwich_cake_large.jpg" alt="Lemon Cake">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">Lemon Zest</h3>
+                        <p class="text-gray-600 mb-4">Tangy lemon cake with citrus glaze.</p>
+                        <p class="text-xl font-bold text-pink-600">$32</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-pink-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-10 text-gray-800">Let’s Create Your Dream Cake</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Contact us to customize your perfect cake for any occasion!</p>
+            <a href="mailto:info@sweetdelights.com" class="cta-button text-white px-8 py-4 rounded-full text-lg font-semibold">Reach Out Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 Sweet Delights Bakery. Crafted with love.</p>
+        </div>
+    </footer>
+</body>
+</html>
